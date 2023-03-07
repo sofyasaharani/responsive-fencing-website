@@ -1,0 +1,277 @@
+/**
+ * root
+ *
+ * @format
+ */
+
+:root {
+  --background-color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: poppins-light;
+  src: url(./font/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: poppins-reguler;
+  src: url(./font/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: poppins-medium;
+  src: url(./font/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: poppins-semibold;
+  src: url(./font/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: poppins-bold;
+  src: url(./font/Poppins-Bold.ttf);
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/*? CONTAINER */
+.container {
+  padding: 2rem 5rem 0;
+}
+
+/*? NAVBAR */
+
+.nav-container {
+  margin-left: 2rem;
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+}
+
+.logo {
+  font-family: poppins-bold;
+  font-size: 1.2rem;
+}
+
+.highlight {
+  color: #d24c42;
+}
+
+.navbar {
+  position: static;
+  z-index: 100;
+}
+
+.nav-item {
+  display: flex;
+  gap: 4rem;
+}
+
+.nav-item a:hover {
+  color: #d24c42;
+  cursor: pointer;
+}
+
+.toogle {
+  display: none;
+}
+
+/*? NAVBAR */
+
+/*? HOME */
+
+.home-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.content {
+  margin-top: 12rem;
+}
+
+.content .tittle {
+  font-family: poppins-semibold;
+  font-size: 8rem;
+  line-height: 0.8;
+}
+
+.content .body {
+  margin-top: 4rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  font-family: poppins-light;
+  letter-spacing: 0.5;
+  color: rgba(255, 255, 255, 60%);
+  line-height: 30px;
+}
+
+.content .button-cta button {
+  margin-top: 4rem;
+  width: 200px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #d24c42;
+  color: white;
+  font-family: poppins-medium;
+  font-size: 1.2rem;
+  border: none;
+  letter-spacing: 0.5%;
+}
+
+.button-cta button:hover {
+  cursor: pointer;
+  background-color: #bb2218;
+  transition: 100ms;
+}
+
+.hero {
+  position: static;
+  z-index: -100;
+}
+
+.hero img {
+  width: 100%;
+  scale: 1.15;
+}
+
+.bubble {
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 10%);
+  position: absolute;
+  top: 30%;
+  display: grid;
+  place-content: center;
+  font-family: poppins-medium;
+  font-size: 1.2rem;
+}
+
+.engarde {
+  margin-right: 1rem;
+}
+
+.prets {
+  top: 20%;
+  right: 10%;
+}
+
+.allez {
+  top: 67%;
+  right: 7%;
+}
+
+/*? HOME */
+
+/*? RESPONSIVE BREAKPOINTS */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 80%;
+  }
+
+  .engarde {
+    margin-right: 1rem;
+  }
+
+  .prets {
+    top: 20%;
+    right: 10%;
+  }
+
+  .allez {
+    top: 67%;
+    right: 7%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  .container {
+    padding: 2.5rem 2.5rem 0;
+  }
+  .home-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .toogle {
+    display: block;
+  }
+  .bubble {
+    display: none;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar {
+    position: absolute;
+    width: 30em;
+    height: 100vh;
+    background-color: #d24c42;
+    top: -100%;
+    right: -100%;
+  }
+
+  .nav-item {
+    padding: 2.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    font-family: poppins-medium;
+  }
+
+  .nav-item a:hover {
+    color: black;
+    font-size: 1.3rem;
+    transition: 300ms;
+    text-decoration: underline;
+  }
+
+  .active {
+    right: 0;
+    top: 0;
+  }
+
+  .toogle img {
+    width: 80%;
+  }
+
+  .toogle:hover {
+    cursor: pointer;
+  }
+}
+
+/* mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .hero {
+    padding-top: 2rem;
+  }
+
+  .hero .bubble {
+    display: none;
+  }
+}
